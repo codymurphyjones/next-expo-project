@@ -91,7 +91,7 @@ const UserAuthentication = (props: UserAuthenticationProps) => {
           </View>
           <View style={{alignItems: "center", width: "80%"}}>  
               <Button onPress={submitButton} width="100%" color={ (isSignIn || (isEmail && isPass)) ? "#ffaa22" : "red"}>Submit</Button>
-              <Button onPress={() => { setisSignIn(!isSignIn); setIsEmail(emailValidate(email)) }} maxWidth={120} width="100%" color="#ffaa22" textColor="#000">{isSignIn ? "Sign Up" : "Sign In"}</Button>
+              <Button onPress={() => { setisSignIn(!isSignIn); setIsEmail(emailValidate(email)) }} maxWidth={120} width="100%" color="#ffaa22" textColor={ props.theme.color}>{isSignIn ? "Sign Up" : "Sign In"}</Button>
           </View>
          
       </View>

@@ -10,7 +10,7 @@ import { ButtonProps } from "./types"
 
 import { withTheme } from '../../with/theme';
 
-const Button = (props: ButtonProps) => {
+const Button = ({theme, ...props}: ButtonProps) => {
 
   let style={
         justifyContent: props.icon ? 'space-around' : 'center',
@@ -41,13 +41,13 @@ const Button = (props: ButtonProps) => {
     let content = () => {
       if(props.icon != null) {
         return ( <>
-            <Icon name={props.icon || "search"} style={{flex: 1, fontSize: 15, padding: 5, paddingRight:10, color: (props.iconColor || (props.textColor || (props.color || "#000")))}} />
-            <Text style={{flex: 2, color: (props.textColor || (props.color || "#000")), fontWeight: props.bold ? 'bold' : 'normal'}}>{props.children}</Text>
+            <Icon name={props.icon || "search"} style={{flex: 1, fontSize: 15, padding: 5, paddingRight:10, color: (props.iconColor || (props.textColor || (props.color || theme.color)))}} />
+            <Text style={{flex: 2, color: (props.textColor || (props.color || theme.color)), fontWeight: props.bold ? 'bold' : 'normal'}}>{props.children}</Text>
             </>
         )
       }
               
-      return (<Text style={{color: (props.textColor || (props.color || "#000"))}}>{props.children}</Text>)
+      return (<Text style={{color: (props.textColor || (props.color || theme.color))}}>{props.children}</Text>)
     }
 
 	

@@ -6,14 +6,15 @@ import StreetPost from './StreetPost'
 import { withTheme } from '../../with/theme';
 
 type StreetPostListProps = {
-  posts: any
+  posts: any,
+  theme: any
 }
 
 const StreetPostList = (props: StreetPostListProps) => {
   const listItems = Object.keys(props.posts).map((id) => {
     let data = props.posts[id];
     return (
-      <StreetPost key={id} user={data.user} name="Kyle Myers" textColor="#000" ticker={data.ticker} src={data.profile}>{data.body}</StreetPost>
+      <StreetPost key={id} user={data.user} name="Kyle Myers" textColor={props.theme.color} ticker={data.ticker} src={data.profile}>{data.body}</StreetPost>
     );
   }
   );

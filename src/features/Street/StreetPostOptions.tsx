@@ -13,7 +13,8 @@ type StreetPostOptionsProps = {
   comments?: number,
   vote?: number,
   showComments?: boolean,
-  count?: number
+  count?: number,
+  theme?: any
 }
 
 
@@ -39,11 +40,11 @@ const StreetPostOptions = (props: StreetPostOptionsProps) => {
             </View>
 			<View style={style.icon}>
             <TouchableHighlight onPress={props.OnUpPress}>
-                <Icon name="chevron-up" style={{ fontSize: 15, padding: 5, paddingRight:10, color: (props.vote > 0) ? "green" : "#000" }}  />
+                <Icon name="chevron-up" style={{ fontSize: 15, padding: 5, paddingRight:10, color: (props.vote > 0) ? "green" : props.theme.color }}  />
             </TouchableHighlight>
-                <Text style={{color: (props.vote > 0) ? "green" : ((props.vote < 0) ? "red" : "#000") }}>{props.count}</Text>
+                <Text style={{color: (props.vote > 0) ? "green" : ((props.vote < 0) ? "red" : props.theme.color) }}>{props.count}</Text>
             <TouchableHighlight onPress={props.OnDownPress}>
-                <Icon name="chevron-down" style={{ fontSize: 15, padding: 5, paddingRight:10, color: (props.vote < 0) ? "red" : "#000" }}  />
+                <Icon name="chevron-down" style={{ fontSize: 15, padding: 5, paddingRight:10, color: (props.vote < 0) ? "red" : props.theme.color }}  />
             </TouchableHighlight>
             </View>
 		</View>
