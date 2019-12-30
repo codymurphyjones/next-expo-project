@@ -1,0 +1,9 @@
+[
+  {
+    "key": "PRIMARY",
+    "backgroundColor": "#FFF",
+	  "secondaryBackgroundColor": "#FFF",
+    "color": "red",
+	  "secondaryColor":"#000"
+  }
+]

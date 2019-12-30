@@ -3,22 +3,45 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
+    "dev": "expo start --web",
+    "eject": "expo eject",
     "web": "next dev",
-    "eject": "expo eject"
+    "web:build": "next build",
+    "build": "npm run web:build",
+	"serve": "node ./server.js $PORT"
   },
   "dependencies": {
     "@expo/next-adapter": "^2.0.0-beta.7",
+    "@types/axios": "^0.14.0",
+    "@types/firebase": "^3.2.1",
+    "@types/react": "^16.9.17",
+    "@zeit/next-css": "^1.0.1",
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
     "expo": "^35.0.0",
+    "express": "^4.17.1",
+    "firebase": "^7.6.1",
+    "module-alias": "^2.2.2",
     "next": "^9.1.4",
     "next-fonts": "^0.19.0",
     "next-images": "^1.2.0",
     "next-offline": "^4.0.6",
+    "node-iex-cloud": "^1.6.1",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
-    "react-native-web": "^0.11.7"
+    "react-native-expo-image-cache": "^4.1.0",
+    "react-native-gesture-handler": "https://github.com/codymurphyjones/react-native-gesture-handler.git",
+    "react-native-reanimated": "^1.4.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-web": "^0.11.7",
+    "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^1.10.3",
+    "react-navigation-tabs": "^2.6.2",
+    "typescript": "^3.8.0-dev.20191228"
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-expo": "^7.1.0"
   },
   "private": true
