@@ -3,15 +3,18 @@ import React from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
 
-import Example from "Features/Example"
+import CenteredContent from 'Components/CenteredContent'
+
+
 
 
 export default function App() {
   
   return (
-    <Example />
+    <CenteredContent>
+      <Text>Hello, World!</Text>
+   </CenteredContent>
   );
 }
-
 
 
